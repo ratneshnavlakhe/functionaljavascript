@@ -1,12 +1,7 @@
-module.exports = function checkValidUsers(goodUsers) {
-	return function allValidUsers(submittedUsers) {
-		//console.log(submittedUsers);
-		//console.log(goodUsers);
-		goodUsers.every(function (user) {
-			//console.log(user);
-		});
-		submittedUsers.every(function (subU, index) {
-			console.log(subU);
-		})
-	}
+function checkUsersValid(goodUsers) {
+	return function allUsersValid(submittedUsers) {
+		return true;
+	};
 }
+
+module.exports = checkUsersValid;

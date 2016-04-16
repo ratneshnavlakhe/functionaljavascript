@@ -1,14 +1,18 @@
 module.exports = function countWords(inputwords) {
-	var newarr = [];
+	var data = {};
 	inputwords.reduce(function(previousValue, currentValue, currentIndex, array) {
-		console.log(previousValue + '--' + currentValue + '--' + currentIndex);
-
+		//console.log(previousValue + '--' + currentValue + '--' + currentIndex + '--'+ array);
+		//if (!data.previousValue) {
+			if(data.previousValue === previousValue) {
+				data.previousValue++;
+			} else {
+				data.previousValue = 1;
+			}
+		//}
+		//data.previousValue = 1
+		//data = { prev}
 		var count = 0;
 		
-		if(previousValue === currentValue) {
-			newarr[previousValue] = count + 1;
-		}
-		return currentValue;
 	});
-	//console.log(newarr);
+	console.log(data);
 };
